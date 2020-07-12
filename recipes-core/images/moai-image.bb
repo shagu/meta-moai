@@ -2,6 +2,10 @@ SUMMARY = "moai base image"
 LICENSE = "MIT"
 
 inherit core-image
+inherit extrausers
+
+# set root password
+EXTRA_USERS_PARAMS = "usermod -P moai root;"
 
 # core dependencies
 IMAGE_INSTALL = " \
@@ -28,7 +32,4 @@ moai_image_config() {
 
   # set hostname
   echo "${IMAGE_HOSTNAME}" > ${IMAGE_ROOTFS}${sysconfdir}/hostname
-
-  # set root password
-  sed -i "s_root::_root:${IMAGE_ROOTPW}:_" ${IMAGE_ROOTFS}${sysconfdir}/shadow
 }
