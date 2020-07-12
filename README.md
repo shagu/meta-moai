@@ -23,4 +23,4 @@
 
 ## Build Image
 
-    bitbake core-image-minimal
+    bitbake moai-image
