@@ -15,6 +15,11 @@ IMAGE_INSTALL += " \
   bash htop vim git screen \
 "
 
+# eq3 homematic
+IMAGE_INSTALL += " \
+  openjre-8 \
+"
+
 ROOTFS_POSTPROCESS_COMMAND += "moai_image_config;"
 
 moai_image_config() {

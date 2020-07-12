@@ -17,6 +17,7 @@
     cd moai
     git clone https://git.yoctoproject.org/git/meta-raspberrypi
     git clone https://git.openembedded.org/meta-openembedded
+    git clone https://git.yoctoproject.org/git/meta-java
     git clone https://github.com/shagu/meta-moai.git
 
     TEMPLATECONF=meta-moai/conf/ source oe-init-build-env
