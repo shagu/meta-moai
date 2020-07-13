@@ -13,6 +13,11 @@ IMAGE_INSTALL = " \
   ${CORE_IMAGE_EXTRA_INSTALL}\
 "
 
+# swupdate
+IMAGE_INSTALL += " \
+  swupdate \
+"
+
 # base moai userland
 IMAGE_INSTALL += " \
   packagegroup-core-ssh-dropbear \
