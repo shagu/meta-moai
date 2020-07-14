@@ -1,0 +1,18 @@
+software =
+{
+  version = "0.1";
+  images: (
+    {
+      filename = "moai-image-MACHINE.ext4.gz";
+      sha256 = "@moai-image-MACHINE.ext4.gz";
+      device = "/dev/inactive";
+      compressed = "zlib";
+      type = "raw";
+    }
+  );
+  scripts: (                                                                                                                             {
+      filename = "postinstall.sh";
+      type = "postinstall";
+    }
+  );
+}
