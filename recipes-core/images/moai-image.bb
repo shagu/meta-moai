@@ -7,6 +7,9 @@ inherit extrausers
 # read-only rootfs
 IMAGE_FEATURES += "read-only-rootfs"
 
+# add package data
+IMAGE_FEATURES += "package-management"
+
 # set root password
 EXTRA_USERS_PARAMS = "usermod -P moai root;"
 
