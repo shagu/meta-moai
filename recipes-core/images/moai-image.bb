@@ -11,11 +11,19 @@ EXTRA_USERS_PARAMS = "usermod -P moai root;"
 IMAGE_INSTALL = " \
   packagegroup-core-boot \
   ${CORE_IMAGE_EXTRA_INSTALL}\
+  u-boot-fw-utils \
+"
+
+# install kernel
+IMAGE_INSTALL += " \
+  kernel-devicetree \
+  kernel-image \
 "
 
 # swupdate
 IMAGE_INSTALL += " \
   swupdate \
+  swupdate-www \
 "
 
 # base moai userland
