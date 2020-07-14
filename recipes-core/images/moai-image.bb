@@ -4,6 +4,9 @@ LICENSE = "MIT"
 inherit core-image
 inherit extrausers
 
+# read-only rootfs
+IMAGE_FEATURES += "read-only-rootfs"
+
 # set root password
 EXTRA_USERS_PARAMS = "usermod -P moai root;"
 
