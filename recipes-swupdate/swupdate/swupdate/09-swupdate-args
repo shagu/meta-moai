@@ -1,0 +1,9 @@
+# set link for inactive root
+rootfs=`mount | grep "on / type" | cut -d':' -f 2 | cut -d' ' -f 1`
+if [ $rootfs == '/dev/mmcblk0p2' ]; then
+  ln -sf /dev/mmcblk0p3 /dev/inactive
+else
+  ln -sf /dev/mmcblk0p2 /dev/inactive
+fi
+
+SWUPDATE_ARGS="${selection} -f /etc/swupdate.cfg"
